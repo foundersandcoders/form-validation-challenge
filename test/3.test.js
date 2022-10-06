@@ -5,6 +5,14 @@ const { loader } = require("./helpers.js");
 test("Field length is enforced", async () => {
   const { $ } = await loader;
   const field = $("#message");
+
+  const pattern = field.getAttribute("pattern");
+  assert.equal(
+    pattern,
+    null,
+    `The \`pattern\` attribute is not supported on <textarea>`
+  );
+
   const maxlength = field.getAttribute("maxlength");
   assert.equal(
     maxlength,

@@ -25,12 +25,10 @@ function required($, id) {
 `
   );
 
-  const required = input.hasAttribute("required");
-  assert.ok(
-    required,
-    `#${input.id} field should have \`required\` attribute, but got:
-  
-    ${input.outerHTML}
-    `
+  const valid = input.checkValidity();
+  assert.equal(
+    valid,
+    false,
+    `#${input.id} field should not be valid when empty`
   );
 }

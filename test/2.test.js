@@ -2,21 +2,36 @@ const test = require("node:test");
 const assert = require("node:assert");
 const { loader } = require("./helpers.js");
 
-test("Field type is enforced", async () => {
+test("email field type is enforced", async () => {
   const { $ } = await loader;
-  has_type($, "email", "email");
-  has_type($, "website", "url");
+  const field = $("#email");
+  field.value = "not an email";
+  assert.equal(
+    field.checkValidity(),
+    false,
+    `#email field should not be valid with value '${field.value}'`
+  );
+  field.value = "valid@example.com";
+  assert.equal(
+    field.checkValidity(),
+    true,
+    `#email field should be valid with value '${field.value}'`
+  );
 });
 
-function has_type($, id, expected) {
-  const input = $("#" + id);
-  const type = input.getAttribute("type");
+test("url field type is enforced", async () => {
+  const { $ } = await loader;
+  const field = $("#website");
+  field.value = "not a URL";
   assert.equal(
-    type,
-    expected,
-    `#${input.id} field should have \`type\` attribute "${expected}", but got:
-  
-    ${input.outerHTML}
-    `
+    field.checkValidity(),
+    false,
+    `#website field should not be valid with value '${field.value}'`
   );
-}
+  field.value = "https://example.com";
+  assert.equal(
+    field.checkValidity(),
+    true,
+    `#website field should be valid with value '${field.value}'`
+  );
+});
