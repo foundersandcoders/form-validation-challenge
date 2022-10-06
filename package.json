@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "eslint": "^8.24.0",
+    "jsdom": "^20.0.1"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es2021": true
+    }
+  }
+}
