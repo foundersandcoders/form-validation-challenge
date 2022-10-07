@@ -26,3 +26,13 @@ fields.forEach((field) => {
     feedback.textContent = "";
   });
 });
+
+const form = document.querySelector("form");
+form.setAttribute("novalidate", "");
+
+form.addEventListener("submit", (event) => {
+  const allValid = event.target.checkValidity();
+  if (!allValid) {
+    event.preventDefault();
+  }
+});
