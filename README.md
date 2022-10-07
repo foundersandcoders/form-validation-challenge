@@ -50,3 +50,12 @@ The validity of each field is not consistently exposed to assistive technologies
 1. Mark all fields as valid at first
 1. When a field fails validation mark it as invalid
 1. When a field is edited mark it valid again
+
+## Challenge 5: Put validation messages in the DOM
+
+The validation messages shown by the browser cannot by styled, and are not consistently exposed to assistive technologies. Write some JS in `challenge/index.js` to add these messages to the DOM instead:
+
+1. Create a new element to hold each message
+1. Associate this element with its field
+1. When a field fails validation add the browser's default message to the element
+1. When a field is edited remove the message
