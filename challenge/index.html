@@ -6,6 +6,27 @@
     <title>Form validation challenge</title>
     <link rel="icon" href="data:," />
     <script defer src="index.js"></script>
+  </head>
+  <body>
+    <form>
+      <label for="name">name</label>
+      <input id="name" />
+
+      <label for="email">email</label>
+      <input id="email" />
+
+      <label for="website">website</label>
+      <input id="website" />
+
+      <label for="subject">subject</label>
+      <input id="subject" />
+
+      <label for="message">message</label>
+      <textarea id="message" rows="5"></textarea>
+
+      <button>Submit</button>
+    </form>
+
     <style>
       * {
         box-sizing: border-box;
@@ -32,26 +53,15 @@
       label {
         text-transform: capitalize;
       }
+      [aria-invalid="true"] {
+        border-color: red;
+      }
+      [aria-invalid="true"] + * {
+        color: red;
+      }
+      [aria-invalid="true"] + *::before {
+        content: "⚠️ ";
+      }
     </style>
-  </head>
-  <body>
-    <form>
-      <label for="name">name</label>
-      <input id="name" />
-
-      <label for="email">email</label>
-      <input id="email" />
-
-      <label for="website">website</label>
-      <input id="website" />
-
-      <label for="subject">subject</label>
-      <input id="subject" />
-
-      <label for="message">message</label>
-      <textarea id="message" rows="5"></textarea>
-
-      <button>Submit</button>
-    </form>
   </body>
 </html>
