@@ -13,7 +13,8 @@ async function load(file) {
   });
 }
 
-const path = "challenge/index.html";
+const DIR = process.env.DIR || "challenge";
+const path = `${DIR}/index.html`;
 const loader = load(path);
 
 module.exports = { loader };
