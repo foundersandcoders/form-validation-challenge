@@ -42,3 +42,11 @@ Make sure to tell the user about the limit so they aren't surprised when they tr
 ## Challenge 4: Prevent uppercase
 
 Users keep shouting at us, and it makes us feel bad. Without adding any JS make sure the `subject` input can only contain lowercase letters, numbers, and spaces.
+
+## Challenge 5: Validity state for assistive tech
+
+The validity of each field is not consistently exposed to assistive technologies like screen readers. Write some JS in `challenge/index.js` that uses the `aria-invalid` attribuet to help:
+
+1. Mark all fields as valid at first
+1. When a field fails validation mark it as invalid
+1. When a field is edited mark it valid again
