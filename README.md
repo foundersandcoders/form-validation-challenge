@@ -45,13 +45,13 @@ Users keep shouting at us, and it makes us feel bad. Without adding any JS make 
 
 ## Challenge 5: Validity state for assistive tech
 
-The validity of each field is not consistently exposed to assistive technologies like screen readers. Write some JS in `challenge/index.js` that uses the `aria-invalid` attribuet to help:
+The validity of each field is not consistently exposed to assistive technologies like screen readers. Write some JS in `challenge/index.js` that uses the `aria-invalid` attribute to help:
 
 1. Mark all fields as valid at first
 1. When a field fails validation mark it as invalid
 1. When a field is edited mark it valid again
 
-## Challenge 5: Put validation messages in the DOM
+## Challenge 6: Put validation messages in the DOM
 
 The validation messages shown by the browser cannot by styled, and are not consistently exposed to assistive technologies. Write some JS in `challenge/index.js` to add these messages to the DOM instead:
 
@@ -60,7 +60,7 @@ The validation messages shown by the browser cannot by styled, and are not consi
 1. When a field fails validation add the browser's default message to the element
 1. When a field is edited remove the message
 
-## Challenge 6: Disable built-in form behaviour
+## Challenge 7: Disable built-in form behaviour
 
 It's a bit confusing for users now as the validation messages show up in two places: the default popup bubble _and_ your new DOM element. Write some JS in `challenge/index.js` to disable this built-in behaviour:
 
