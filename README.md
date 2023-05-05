@@ -6,7 +6,7 @@ Practice validating user input in the browser.
 
 Make sure you have Git and Node (v18) installed.
 
-1. Clone this repo and `cd` into the directory
+1. [Use this template](https://github.com/foundersandcoders/server-challenge/generate), clone your copy, cd into it
 1. Run `npm install` to install all the dependencies
 1. Open `challenge/index.html` in your browser
 
