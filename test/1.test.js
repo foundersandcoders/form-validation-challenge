@@ -4,9 +4,6 @@ const { loader } = require("./helpers.js");
 
 test("Mandatory fields are required", async () => {
   const { $ } = await loader;
-  // const form = document.querySelector("form");
-  // form.addEventListener("submit", (event) => event.preventDefault());
-
   required($, "name");
   required($, "email");
   required($, "message");
